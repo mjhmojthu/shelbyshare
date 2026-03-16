@@ -125,9 +125,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-20 text-center text-sm text-gray-500">
-        <p>Powered by Shelby Protocol 🚀</p>
-        <p className="mt-2">
-          Built for Shelby Early Access Application
+        <p>Powered by 2NH on Shelby 🚀</p>
         </p>
       </footer>
     </div>
