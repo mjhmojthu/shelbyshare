@@ -8,12 +8,14 @@ import { createServiceClient } from '@/lib/supabase';
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   let tempPath: string | null = null;
 
   try {
-    const shareId = params.id;
+    const { id: shareId } = await params;  // <-- THÊM DÒNG NÀY
+    
+    // Thay "const shareId = params.id;" bằng dòng trên
 
     // Get file metadata from database
     const supabase = createServiceClient();
