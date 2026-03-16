@@ -5,11 +5,8 @@ import { tmpdir } from 'os';
 import { uploadToShelby } from '@/lib/shelby';
 import { createServiceClient } from '@/lib/supabase';
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   let tempPath: string | null = null;
